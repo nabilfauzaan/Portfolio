@@ -38,6 +38,13 @@ section::before {
 .home .arrow img {
     width: 60px;
 }
+.home img {
+    width: 70%;
+}
+.img-home {
+    width: 70%;
+    border-radius: 50%;
+}
 
 #arrow {
     animation: 2s upDown infinite;
@@ -61,10 +68,10 @@ section::before {
 .work::before {
     content: 'Work';
 }
-.work.img {
+.work-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "work-1 work-2 work-3 work-3";
+    grid-template-areas: "work-1 work-2" "work-3 work-3";
     gap: 16px;
 }
 .work-img img {
@@ -120,6 +127,19 @@ section::before {
 
 .form-label {
     font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .home img {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section::before {
+        left: -10px;
+        font-size: 64px;
+    }
 }
 
 @keyframes upDown {
